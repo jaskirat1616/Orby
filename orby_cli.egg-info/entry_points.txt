@@ -1,0 +1,2 @@
+[console_scripts]
+orby = orby.cli:main

@@ -1,0 +1,379 @@
+/* Textual CSS for Orby TUI with modern, responsive styling */
+
+/* Main app styling */
+Screen {
+    background: var(--surface, $surface);
+    color: var(--text, $text);
+}
+
+/* Header styling */
+Header {
+    background: var(--primary, $primary);
+    color: var(--text, $text);
+    text-align: center;
+    border-bottom: solid var(--primary-lighten-1, $primary-lighten-1);
+    height: 3;
+}
+
+Header > .title {
+    text-style: bold;
+    color: var(--text, $text);
+}
+
+/* Main container */
+#main-container {
+    height: 1fr - 4; /* Account for header and footer */
+}
+
+/* Dashboard styling */
+.title {
+    text-align: center;
+    content-align: center middle;
+    text-style: bold;
+    color: var(--accent, $accent);
+    height: 2;
+}
+
+.subtitle {
+    text-align: center;
+    content-align: center middle;
+    color: var(--text-muted, $text-muted);
+    height: 1;
+}
+
+.dashboard-container {
+    layout: horizontal;
+    height: 12;
+    margin: 1;
+    width: 100%;
+}
+
+/* Panel styling */
+.panel-title {
+    text-style: bold;
+    color: var(--accent, $accent);
+    margin-bottom: 1;
+}
+
+/* Status panel */
+#status-panel {
+    width: 1fr;
+    height: 1fr;
+    border: solid var(--primary, $primary);
+    padding: 1;
+    background: var(--panel, $panel);
+    min-width: 25;
+}
+
+/* Memory panel */
+#memory-panel {
+    width: 1fr;
+    height: 1fr;
+    border: solid var(--secondary, $secondary);
+    padding: 1;
+    background: var(--panel, $panel);
+    min-width: 25;
+}
+
+/* Model panel */
+#model-panel {
+    width: 1fr;
+    height: 1fr;
+    border: solid var(--success, $success);
+    padding: 1;
+    background: var(--panel, $panel);
+    min-width: 25;
+}
+
+/* Conversation pane */
+.chat-container {
+    height: 1fr;
+    border: solid var(--primary, $primary);
+    width: 1fr;
+}
+
+.chat-history {
+    height: 1fr - 3;
+    border-bottom: solid var(--surface-lighten-1, $surface-lighten-1);
+    padding: 1;
+}
+
+.user-message {
+    color: var(--primary, $primary);
+    text-style: bold;
+    margin: 1 0;
+}
+
+.agent-message {
+    color: var(--accent, $accent);
+    margin: 1 0;
+}
+
+.input-container {
+    height: 3;
+    padding: 0 1;
+    layout: horizontal;
+}
+
+.message-input {
+    width: 1fr - 10;
+    height: 3;
+    border: solid var(--primary, $primary);
+}
+
+.send-btn {
+    width: 9;
+    height: 3;
+    margin-left: 1;
+}
+
+/* Tools pane - responsive width */
+#tools {
+    width: 40;
+    height: 1fr;
+    border: solid var(--secondary, $secondary);
+    padding: 1;
+    background: var(--panel, $panel);
+    min-width: 20;
+    transition: width 250ms;
+}
+
+/* When tools are hidden */
+#tools:not(.show) {
+    width: 0;
+    border: none;
+    padding: 0;
+}
+
+/* Tabbed content styling */
+TabbedContent {
+    height: 1fr - 2;
+}
+
+TabPane {
+    padding: 1;
+    height: 1fr;
+}
+
+/* Context preview styling */
+.context-title {
+    text-style: bold;
+    color: var(--secondary, $secondary);
+    margin-bottom: 1;
+}
+
+.context-line {
+    margin: 0 0 1 0;
+    color: var(--text-muted, $text-muted);
+}
+
+.no-context {
+    color: var(--text-muted, $text-muted);
+    i: italic;
+}
+
+/* History styling */
+.history-title {
+    text-style: bold;
+    color: var(--primary, $primary);
+    margin-bottom: 1;
+}
+
+.history-list-container {
+    height: 1fr - 4;
+}
+
+.history-actions {
+    margin-top: 1;
+    height: 3;
+}
+
+.history-btn {
+    width: 1fr;
+    margin-right: 1;
+}
+
+.history-btn:last-child {
+    margin-right: 0;
+}
+
+/* System info styling */
+.system-title {
+    text-style: bold;
+    color: var(--success, $success);
+    margin-bottom: 1;
+}
+
+/* Status footer */
+.status-footer {
+    height: 1;
+    border-top: solid var(--surface-lighten-1, $surface-lighten-1);
+    padding: 0 1;
+    layout: horizontal;
+    content-align: left middle;
+}
+
+.status-ready {
+    color: var(--success, $success);
+    text-style: bold;
+}
+
+.status-thinking {
+    color: var(--warning, $warning);
+    text-style: bold;
+}
+
+.status-error {
+    color: var(--error, $error);
+    text-style: bold;
+}
+
+/* Button styling */
+Button {
+    border: none;
+    text-style: bold;
+}
+
+Button:hover {
+    text-style: bold reverse;
+}
+
+Button.-primary {
+    background: var(--primary, $primary);
+    color: var(--text, $text);
+}
+
+Button.-primary:hover {
+    background: var(--primary-lighten-1, $primary-lighten-1);
+}
+
+/* Input styling */
+Input {
+    background: var(--surface, $surface);
+    border: solid var(--surface-lighten-1, $surface-lighten-1);
+    color: var(--text, $text);
+}
+
+Input:focus {
+    border: solid var(--primary, $primary);
+    text-style: bold;
+}
+
+/* List styling */
+ListView {
+    border: solid var(--surface-lighten-1, $surface-lighten-1);
+    background: var(--surface, $surface);
+}
+
+ListItem {
+    padding: 0 1;
+    height: 1;
+}
+
+ListItem:hover {
+    background: var(--primary, $primary);
+    color: var(--text, $text);
+}
+
+/* Scrollable container */
+ScrollableContainer {
+    border: solid var(--surface-lighten-1, $surface-lighten-1);
+}
+
+/* Command Palette */
+.command-palette-overlay {
+    width: 80%;
+    height: 60%;
+    offset-x: center;
+    offset-y: center;
+    background: var(--panel, $panel);
+    border: solid var(--primary, $primary);
+    padding: 1;
+    z-index: 1000;
+}
+
+.palette-title {
+    text-style: bold;
+    color: var(--accent, $accent);
+    margin-bottom: 1;
+    text-align: center;
+}
+
+.command-input {
+    width: 1fr;
+    margin-bottom: 1;
+}
+
+.command-list {
+    height: 1fr - 6; /* Account for title and input */
+}
+
+.command-item {
+    padding: 0 1;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 80) {
+    .dashboard-container {
+        layout: grid;
+        grid-size: 1 3;
+        height: auto;
+    }
+    
+    #status-panel, #memory-panel, #model-panel {
+        width: 100%;
+        height: 5;
+    }
+    
+    #tools {
+        width: 25;
+    }
+}
+
+@media (max-width: 60) {
+    #tools {
+        width: 0;
+        border: none;
+        padding: 0;
+    }
+    
+    #conversation {
+        width: 100%;
+    }
+    
+    .dashboard-container {
+        height: auto;
+    }
+}
+
+/* Footer styling */
+Footer {
+    background: var(--surface-darken-1, $surface-darken-1);
+    color: var(--text-muted, $text-muted);
+    height: 1;
+}
+
+/* Status items */
+.status-item {
+    margin: 0 0 1 0;
+}
+
+.memory-stat {
+    margin: 0 0 1 0;
+}
+
+.prompt-preview {
+    margin-top: 1;
+    color: var(--text-muted, $text-muted);
+    i: italic;
+}
+
+.usage-bar {
+    margin: 1 0;
+}
+
+.recent-entries {
+    margin-top: 1;
+    color: var(--text-muted, $text-muted);
+    font-size: 0.8em;
+}
